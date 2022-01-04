@@ -243,7 +243,8 @@ img {
 }
 
 .act-title,
-.team-title {
+.team-title,
+.clients-title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -337,15 +338,14 @@ img {
   display: flex;
 }
 
-.sm-list-item {
-}
-
 .sm-list-item:not(:last-child) {
   margin-right: 10px;
 }
 
 .team-sm-list-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   background-color: var(--primary-bgc);
@@ -364,6 +364,35 @@ img {
   width: 20px;
   height: 20px;
   fill: var(--primart-sm-icon-fill);
+}
+
+/* ---------- index.html/Clients ----------*/
+
+.clients-list {
+  display: flex;
+  margin: 0 auto;
+}
+
+.clients-list-link {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.clients-list-item {
+  width: calc((100% - 150px) / 6);
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.client-list-item:note(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
 }
 
 /* -----------portfolio.html ----------- */
