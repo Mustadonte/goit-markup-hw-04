@@ -231,15 +231,18 @@ img {
 }
 
 .feature-list-icon-bg {
+  display: flex;
   background-color: #f5f4fa;
-  padding: 25px 100px;
+  width: 270px;
+  height: 120px;
   margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-list-icon {
   width: 70px;
   height: 70px;
-  margin: 0 auto;
 }
 
 .act-title,
@@ -314,7 +317,7 @@ img {
 
 .team-cards-desc {
   text-align: center;
-  padding: 30px 0;
+  padding-top: 30px;
 }
 
 .team-names {
@@ -331,11 +334,9 @@ img {
   color: var(--secondary-text-color);
 }
 
-.teams-sm-container {
-  margin: 16px 32px 30px 32px;
-}
 .team-sm-list {
   display: flex;
+  margin: 16px 32px 30px 32px;
 }
 
 .sm-list-item:not(:last-child) {
@@ -385,9 +386,6 @@ img {
 .clients-list-item {
   display: flex;
   width: calc((100% - 150px) / 6);
-  padding: 16px 32px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
   align-items: center;
   justify-content: center;
 }
@@ -402,10 +400,26 @@ img {
   fill: #afb1b8;
 }
 
-/* .clients-icon:focus
-Пересмотреть эффект  */
-.clients-icon:hover {
-  fill: var(--accent-color);
+.clients-list-link {
+  display: block;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+.clients-list-link:hover .clients-icon {
+  fill: currentColor;
+}
+
+.clienst-list-link:focus .clients-icon {
+  fill: currentColor;
 }
 
 /* -----------portfolio.html ----------- */
@@ -427,6 +441,9 @@ img {
 
 .portfolio-card {
   padding: 20px 24px;
+}
+.portfolio-list-link {
+  display: block;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
@@ -434,11 +451,10 @@ img {
 
 .portfolio-list-item {
   width: calc((100% - 60px) / 3);
-  border-top: none;
 }
 
-.portfolio-list-item:hover,
-.portfolio-list-item:focus {
+.portfolio-list-link:hover,
+.portfolio-list-link:focus {
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -519,6 +535,7 @@ img {
 
 .footer-flex {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-logo {
@@ -557,8 +574,6 @@ img {
 }
 
 .footer-sm {
-  padding-top: 12px;
-  margin-bottom: 100px;
   margin-left: 70px;
 }
 
